@@ -16,8 +16,8 @@ from datetime import date, timedelta
 MYSQL 
 '''
 mysqlhost="localhost"
-mysqluser="logadmin"
-mysqlpass="${MYSQL_PASSWORD}"
+mysqluser="root"
+mysqlpass="cuall96"
 mysqldb="Syslog"
 
 

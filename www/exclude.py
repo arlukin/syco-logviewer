@@ -3,7 +3,7 @@
 import cgi
 import os
 from datetime import date, timedelta
-from log_mysql import search_logs, logs_are_signed, sign_logs, add_exclude, get_exclude, del_exclude
+from mysql import search_logs, logs_are_signed, sign_logs, add_exclude, get_exclude, del_exclude
 
 import cgitb; cgitb.enable()  # for troubleshooting
 # Create instance of FieldStorage 

@@ -2,7 +2,7 @@
  
 import cgi
 import os
-from log_mysql import get_signed, search_logs
+from mysql import get_signed, search_logs
 from datetime import date, timedelta
 import cgitb; cgitb.enable()  # for troubleshooting
 print "Content-type: text/html"
