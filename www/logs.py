@@ -34,7 +34,7 @@ print """
 #Excluding records
 if form.getvalue('exclude'):
 	exclude = form.getvalue('exclude')
-	add_exclude(exclude)
+	add_exclude(exclude,'EXCLUDE')
 
 	print """
 	<div class="alert alert-warning">
@@ -45,7 +45,7 @@ if form.getvalue('exclude'):
 #Signing yestordays logs
 if form.getvalue('user'):
 	time = form.getvalue('view_date')
-	user  = form.getvalue('user')
+	user  = os.environ["REMOTE_USER"]
 	mess  = form.getvalue('mess')
 	sign_logs(time,user,mess,date.today())
 
@@ -85,11 +85,11 @@ for i in range(result.rowcount):
 			row = result.fetchone()
 			if row[2] == "kernel:":
 				row_class="error"
-			elif row[1] == "warning":
+			elif row[2] == "syco-task:":
 				row_class="warning"
-			elif row[1] == "secuess":
+			elif row[2] == "audispd:":
 				row_class="success"
-			elif row[1] == "info":
+			elif row[2] == "ossec:":
 				row_class="info"
 			else:
 				row_class="non"
