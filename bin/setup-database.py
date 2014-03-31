@@ -191,16 +191,20 @@ load_log_viewer = ask_load('log-viewer')
 #
 # Do the database installation.
 #
+
 if create_database:
     mysql_load('create-database.sql')
+
 if create_systemevents:
     mysql_load('create-systemevents.sql')
+
 if create_log_viewer:
     mysql_load('create-logviewer.sql')
+
 if load_system_events:
     mysql_load('data-systemevents.sql')
+
 if load_log_viewer:
     mysql_load('data-logviewer.sql')
 
-# Teardown
 print "Done"

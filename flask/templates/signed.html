@@ -10,13 +10,15 @@
             <th>Date</th>
             <th>Signed by</th>
             <th>Date signed</th>
+            <th>Message</th>
             <th>Entries</th>
           </tr>
         </thead>
         <tbody>
           {% if not session.signed %}
             <tr>
-              <td><a href="{{ url_for('logs') }}">Today</a></td>
+              <td><a href="{{ url_for('log_entries', date=2014-01-01) }}">Today</a></td>
+              <td></td>
               <td></td>
               <td></td>
               <td>?</td>
@@ -25,17 +27,12 @@
 
           {% for entry in entries %}
             <tr>
-              <td>Lorem</td>
-              <td>ipsum</td>
-              <td>dolor</td>
-              <td>dolor</td>
-            </tr>
-
-            <tr>
-              <td>amet</td>
-              <td>consectetur</td>
-              <td>adipiscing</td>
-              <td>adipiscing</td>
+              <td><a href="{{ url_for('log_entries', date=entry['created']) }}">{{ entry['created']}}</a></td>
+              <td>{{ entry['created']}}</td>
+              <td>{{ entry['sign']}}</td>
+              <td>{{ entry['signdate']}}</td>
+              <td>{{ entry['message']}}</td>
+              <td>?</td>
             </tr>
           {% endfor %}
 

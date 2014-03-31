@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="row">
+  <div class="col-sm-12 col-md-12 main">
+    <h2 class="sub-header">Log entries</h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>User</th>
+            <th>Status</th>
+            <th>Exclude</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for entry in entries %}
+            <tr>
+              <td>{{ entry['ReceivedAt']}}</td>
+              <td>{{ entry['CustomerID']}}</td>
+              <td>{{ entry['Message']}}</td>
+              <td>{{ entry['EventID']}}</td>
+            </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+  `ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `CustomerID` bigint(20) DEFAULT NULL,
+  `ReceivedAt` datetime DEFAULT NULL,
+  `DeviceReportedTime` datetime DEFAULT NULL,
+  `Facility` smallint(6) DEFAULT NULL,
+  `Priority` smallint(6) DEFAULT NULL,
+  `FromHost` varchar(60) DEFAULT NULL,
+  `Message` text,
+  `NTSeverity` int(11) DEFAULT NULL,
+  `Importance` int(11) DEFAULT NULL,
+  `EventSource` varchar(60) DEFAULT NULL,
+  `EventUser` varchar(60) DEFAULT NULL,
+  `EventCategory` int(11) DEFAULT NULL,
+  `EventID` int(11) DEFAULT NULL,
+  `EventBinaryData` text,
+  `MaxAvailable` int(11) DEFAULT NULL,
+  `CurrUsage` int(11) DEFAULT NULL,
+  `MinUsage` int(11) DEFAULT NULL,
+  `MaxUsage` int(11) DEFAULT NULL,
+  `InfoUnitID` int(11) DEFAULT NULL,
+  `SysLogTag` varchar(60) DEFAULT NULL,
+  `EventLogType` varchar(60) DEFAULT NULL,
+  `GenericFileName` varchar(60) DEFAULT NULL,
+  `SystemID` int(11) DEFAULT NULL,
+  `processid` varchar(60) NOT NULL DEFAULT '',

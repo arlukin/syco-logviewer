@@ -9,8 +9,10 @@
 """
 
 import os
+import time
 
 from sqlalchemy import create_engine
+from sqlalchemy.sql.expression import text
 from flask import Flask, request, g, redirect, url_for, render_template, flash
 
 
@@ -51,21 +53,36 @@ def close_db(ex):
 
 @app.route('/')
 def logs():
-    cur = g.con.execute('SELECT title, text FROM entries ORDER BY id DESC')
+    cur = g.con.execute('SELECT * FROM signed ORDER BY id DESC')
     entries = cur.fetchall()
     args = {
         'REMOTE_USER': os.environ.get("REMOTE_USER", 'Unknown')
     }
 
-    return render_template('show_entries.html', entries=entries, **args)
+    return render_template('signed.html', entries=entries, **args)
 
 
-@app.route('/log-entries')
-def log_entries():
-    db = get_db()
-    cur = db.execute('SELECT title, text FROM entries ORDER BY id DESC')
+@app.route('/log-entries/<date>')
+def log_entries(date):
+    """Takes a date with format 2013-01-23"""
+    day_time = time.strptime(date, '%Y-%m-%d')
+    from_date = time.strftime('%Y-%m-%d 00:00:00', day_time)
+    to_date = time.strftime('%Y-%m-%d 23:59:59', day_time)
+
+    cur = g.con.execute(
+        text(
+            'SELECT * FROM SystemEvents '
+            'WHERE ReceivedAt BETWEEN :from_date AND :to_date ORDER BY id DESC'
+        ),
+        from_date=from_date, to_date=to_date
+    )
+
     entries = cur.fetchall()
-    return render_template('show_entries.html', entries=entries)
+    args = {
+        'REMOTE_USER': os.environ.get("REMOTE_USER", 'Unknown')
+    }
+
+    return render_template('log-entries.html', entries=entries, **args)
 
 
 @app.route('/log-entries', methods=['POST'])
@@ -80,18 +97,24 @@ def add_entry():
 
 @app.route('/exclude')
 def exclude():
-    db = get_db()
-    cur = db.execute('SELECT title, text FROM entries ORDER BY id DESC')
+    cur = g.con.execute('SELECT * FROM exclude ORDER BY id DESC')
     entries = cur.fetchall()
-    return render_template('show_entries.html', entries=entries)
+    args = {
+        'REMOTE_USER': os.environ.get("REMOTE_USER", 'Unknown')
+    }
+
+    return render_template('exclude.html', entries=entries, **args)
 
 
 @app.route('/alert')
 def alert():
-    db = get_db()
-    cur = db.execute('SELECT title, text FROM entries ORDER BY id DESC')
+    cur = g.con.execute('SELECT * FROM alert ORDER BY id DESC')
     entries = cur.fetchall()
-    return render_template('show_entries.html', entries=entries)
+    args = {
+        'REMOTE_USER': os.environ.get("REMOTE_USER", 'Unknown')
+    }
+
+    return render_template('alert.html', entries=entries, **args)
 
 
 if __name__ == '__main__':

@@ -6,6 +6,20 @@ CREATE SCHEMA IF NOT EXISTS `syslog` DEFAULT CHARACTER SET latin1 ;
 USE `syslog` ;
 
 -- -----------------------------------------------------
+-- Table `syslog`.`signed`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `syslog`.`signed` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `sign` VARCHAR(100) NULL DEFAULT NULL,
+  `message` VARCHAR(255) NULL DEFAULT NULL,
+  `signdate` DATETIME NULL DEFAULT NULL,
+  `created` DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
 -- Table `syslog`.`alert`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `syslog`.`alert` (
@@ -33,19 +47,6 @@ CREATE TABLE IF NOT EXISTS `syslog`.`exclude` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-
--- -----------------------------------------------------
--- Table `syslog`.`signed`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `syslog`.`signed` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `sign` VARCHAR(100) NULL DEFAULT NULL,
-  `message` VARCHAR(255) NULL DEFAULT NULL,
-  `signdate` DATETIME NULL DEFAULT NULL,
-  `created` DATETIME NULL DEFAULT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="row">
+  <div class="col-sm-12 col-md-12 main">
+    <h2 class="sub-header">Log entries</h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>User</th>
+            <th>Host</th>
+            <th>Status</th>
+            <th>Alert</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for entry in entries %}
+            <tr>
+              <td>{{ entry['created']}}</td>
+              <td>{{ entry['user']}}</td>
+              <td>{{ entry['host']}}</td>
+              <td>{{ entry['status']}}</td>
+              <td>{{ entry['alert']}}</td>
+            </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
