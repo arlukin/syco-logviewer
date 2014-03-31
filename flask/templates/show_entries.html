@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="row">
+  <div class="col-sm-12 col-md-12 main">
+    <h2 class="sub-header">Log entries</h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Signed by</th>
+            <th>Date signed</th>
+            <th>Entries</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% if not session.signed %}
+            <tr>
+              <td><a href="{{ url_for('logs') }}">Today</a></td>
+              <td></td>
+              <td></td>
+              <td>?</td>
+            </tr>
+          {% endif %}
+
+          {% for entry in entries %}
+            <tr>
+              <td>Lorem</td>
+              <td>ipsum</td>
+              <td>dolor</td>
+              <td>dolor</td>
+            </tr>
+
+            <tr>
+              <td>amet</td>
+              <td>consectetur</td>
+              <td>adipiscing</td>
+              <td>adipiscing</td>
+            </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
