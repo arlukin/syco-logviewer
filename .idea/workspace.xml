@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01a1e08f-3b2f-41db-a473-2fa6619ffcd4" name="Default" comment="§">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cron.d/syco-logviewer.md" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/flaskr.py" afterPath="$PROJECT_DIR$/logviewer/logviewer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/flaskr_tests.py" afterPath="$PROJECT_DIR$/logviewer/flaskr_tests.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/static/bootstrap.css" afterPath="$PROJECT_DIR$/logviewer/static/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/static/bootstrap.min.css" afterPath="$PROJECT_DIR$/logviewer/static/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/static/bootstrap.min.js" afterPath="$PROJECT_DIR$/logviewer/static/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/static/html5shiv.js" afterPath="$PROJECT_DIR$/logviewer/static/html5shiv.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/static/jquery.min.js" afterPath="$PROJECT_DIR$/logviewer/static/jquery.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/static/respond.min.js" afterPath="$PROJECT_DIR$/logviewer/static/respond.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/static/style.css" afterPath="$PROJECT_DIR$/logviewer/static/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/templates/alert.html" afterPath="$PROJECT_DIR$/logviewer/templates/alert.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/templates/exclude.html" afterPath="$PROJECT_DIR$/logviewer/templates/exclude.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/templates/layout.html" afterPath="$PROJECT_DIR$/logviewer/templates/layout.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/templates/log-entries.html" afterPath="$PROJECT_DIR$/logviewer/templates/log-entries.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/templates/login.html" afterPath="$PROJECT_DIR$/logviewer/templates/login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flask/templates/signed.html" afterPath="$PROJECT_DIR$/logviewer/templates/signed.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/mysql.py" afterPath="$PROJECT_DIR$/www/mysql.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/index.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logviewer/logviewer.py" afterPath="$PROJECT_DIR$/logviewer/logviewer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logviewer/templates/signed.html" afterPath="$PROJECT_DIR$/logviewer/templates/signed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo.md" afterPath="$PROJECT_DIR$/todo.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="syco-logviewer.iws" />
@@ -37,7 +23,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/syco-logviewer$flaskr.coverage" NAME="flaskr Coverage Results" MODIFIED="1396861712150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flask" />
     <SUITE FILE_PATH="coverage/syco-logviewer$socket.coverage" NAME="socket Coverage Results" MODIFIED="1395844402058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7" />
-    <SUITE FILE_PATH="coverage/syco-logviewer$logviewer.coverage" NAME="logviewer Coverage Results" MODIFIED="1396862297850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logviewer" />
+    <SUITE FILE_PATH="coverage/syco-logviewer$logviewer.coverage" NAME="logviewer Coverage Results" MODIFIED="1396879524445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logviewer" />
     <SUITE FILE_PATH="coverage/syco-logviewer$setup_database.coverage" NAME="setup-database Coverage Results" MODIFIED="1396277020460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bin" />
     <SUITE FILE_PATH="coverage/syco-logviewer$Unittests_in_setup.coverage" NAME="Unittests in old-setup-database Coverage Results" MODIFIED="1396269132811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bin" />
   </component>
@@ -53,13 +39,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="logviewer.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logviewer/logviewer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="2415">
+              <folding>
+                <marker date="1396879996000" expanded="true" signature="1679:1716" placeholder="SELECT * FRO..signed..." />
+                <marker date="1396879996000" expanded="true" signature="2038:2082" placeholder="SELECT min(s..signed..." />
+                <marker date="1396879996000" expanded="true" signature="2792:2899" placeholder="SELECT * FRO..SystemEvents..." />
+                <marker date="1396879996000" expanded="true" signature="3247:3294" placeholder="INSERT INTO ..." />
+                <marker date="1396879996000" expanded="true" signature="3524:3562" placeholder="SELECT * FRO..exclude..." />
+                <marker date="1396879996000" expanded="true" signature="3807:3843" placeholder="SELECT * FRO..alert..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="todo.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/todo.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="23" selection-start="259" selection-end="259" vertical-scroll-proportion="0.32374102" vertical-offset="0" max-vertical-offset="556">
+            <state line="2" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="0.03508772" vertical-offset="0" max-vertical-offset="855">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signed.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logviewer/templates/signed.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="48" selection-start="646" selection-end="646" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
@@ -80,8 +91,6 @@
       <list>
         <option value="$PROJECT_DIR$/httpd/vhost.conf" />
         <option value="$PROJECT_DIR$/flask/templates/show_entries.html" />
-        <option value="$PROJECT_DIR$/www/index.py" />
-        <option value="$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py" />
         <option value="$PROJECT_DIR$/bin/setup.py" />
         <option value="$PROJECT_DIR$/bin/bash-utils" />
         <option value="$PROJECT_DIR$/bin/config" />
@@ -101,14 +110,17 @@
         <option value="$PROJECT_DIR$/flask/flaskr.py" />
         <option value="$PROJECT_DIR$/www/mysql.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/www/index.py" />
+        <option value="$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py" />
+        <option value="$PROJECT_DIR$/logviewer/templates/signed.html" />
+        <option value="$PROJECT_DIR$/logviewer/logviewer.py" />
         <option value="$PROJECT_DIR$/todo.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
     <option name="y" value="22" />
-    <option name="width" value="1676" />
+    <option name="width" value="1680" />
     <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -153,6 +165,52 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="syco-logviewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syco-logviewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syco-logviewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syco-logviewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syco-logviewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logviewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syco-logviewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syco-logviewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logviewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -286,7 +344,9 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/logviewer/logviewer.py" />
       <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -484,7 +544,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="22" width="1676" height="1028" extended-state="6" />
+    <frame x="0" y="22" width="1680" height="1028" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -492,11 +552,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25887394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25885227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989011" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25887394" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32857144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -528,13 +588,11 @@
           <line>150</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/logviewer/logviewer.py</url>
-          <line>67</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="25" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="41" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -559,15 +617,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="11" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.0" vertical-offset="623" max-vertical-offset="1860">
           <folding>
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT title..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..signed..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..SystemEvents..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..SystemEvents..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..SystemEvents..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..SystemEvents..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..exclude..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..alert..." />
+            <marker date="1396879996000" expanded="true" signature="1679:1716" placeholder="SELECT * FRO..signed..." />
+            <marker date="1396879996000" expanded="true" signature="2038:2082" placeholder="SELECT min(s..signed..." />
+            <marker date="1396879996000" expanded="true" signature="2792:2899" placeholder="SELECT * FRO..SystemEvents..." />
+            <marker date="1396879996000" expanded="true" signature="3247:3294" placeholder="INSERT INTO ..." />
+            <marker date="1396879996000" expanded="true" signature="3524:3562" placeholder="SELECT * FRO..exclude..." />
+            <marker date="1396879996000" expanded="true" signature="3807:3843" placeholder="SELECT * FRO..alert..." />
           </folding>
         </state>
       </provider>
@@ -581,12 +636,16 @@
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1153" column="21" selection-start="47922" selection-end="47922" vertical-scroll-proportion="0.0" vertical-offset="16992" max-vertical-offset="23100" />
+        <state line="1153" column="21" selection-start="47922" selection-end="47922" vertical-scroll-proportion="0.0" vertical-offset="16992" max-vertical-offset="23100">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/flask/globals.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="750" />
+        <state line="26" column="0" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="750">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/engine/__init__.py">
@@ -618,11 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="600" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/bin/auto_alert.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425" />
@@ -638,21 +692,6 @@
         <state line="64" column="24" selection-start="1499" selection-end="1499" vertical-scroll-proportion="1.0859729" vertical-offset="0" max-vertical-offset="1380" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/logs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="31" selection-start="432" selection-end="432" vertical-scroll-proportion="0.37887487" vertical-offset="0" max-vertical-offset="1905" />
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1463" column="11" selection-start="61731" selection-end="61731" vertical-scroll-proportion="0.24660634" vertical-offset="21727" max-vertical-offset="27720" />
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="0" selection-start="7712" selection-end="7755" vertical-scroll-proportion="0.0" vertical-offset="3172" max-vertical-offset="8685" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logviewer/static/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="88485" />
@@ -660,7 +699,9 @@
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/flask/globals.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="592" selection-end="592" vertical-scroll-proportion="0.44117647" vertical-offset="0" max-vertical-offset="884" />
+        <state line="26" column="0" selection-start="592" selection-end="592" vertical-scroll-proportion="0.44117647" vertical-offset="0" max-vertical-offset="884">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/engine/strategies.py">
@@ -680,17 +721,14 @@
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/werkzeug/local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="337" column="0" selection-start="10503" selection-end="10503" vertical-scroll-proportion="0.19570136" vertical-offset="4882" max-vertical-offset="6225" />
+        <state line="337" column="0" selection-start="10503" selection-end="10503" vertical-scroll-proportion="0.19570136" vertical-offset="4882" max-vertical-offset="6225">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/connectors/mysqldb.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="64" column="8" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.2975113" vertical-offset="697" max-vertical-offset="2520" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1144" column="0" selection-start="47625" selection-end="47625" vertical-scroll-proportion="0.3768116" vertical-offset="16978" max-vertical-offset="23100" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/sqlalchemy/engine/base.py">
@@ -706,11 +744,6 @@
     <entry file="file://$USER_HOME$/syco-logviewer/lib/python2.7/site-packages/mysql/connector/connection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="330" column="32" selection-start="11468" selection-end="11468" vertical-scroll-proportion="0.65317917" vertical-offset="4611" max-vertical-offset="22515" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.11904762" vertical-offset="0" max-vertical-offset="882" />
       </provider>
     </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py">
@@ -735,11 +768,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/var/sql/create-logviewer.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="39" selection-start="938" selection-end="1205" vertical-scroll-proportion="0.4591346" vertical-offset="68" max-vertical-offset="900" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/var/sql/create-systemevents.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="0" selection-start="244" selection-end="1201" vertical-scroll-proportion="0.3982906" vertical-offset="292" max-vertical-offset="990">
@@ -754,23 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="24114" selection-end="24114" vertical-scroll-proportion="0.08256881" vertical-offset="0" max-vertical-offset="545">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logviewer/logviewer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="25" selection-start="3001" selection-end="3001" vertical-scroll-proportion="0.7169811" vertical-offset="1322" max-vertical-offset="1905">
-          <folding>
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT title..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..signed..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..SystemEvents..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..SystemEvents..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..SystemEvents..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..SystemEvents..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..exclude..." />
-            <marker date="1396862185000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..alert..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -805,13 +816,6 @@
     <entry file="file://$PROJECT_DIR$/logviewer/templates/exclude.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="34" selection-start="138" selection-end="138" vertical-scroll-proportion="0.107334524" vertical-offset="0" max-vertical-offset="559">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logviewer/templates/signed.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="33" selection-start="137" selection-end="137" vertical-scroll-proportion="0.107334524" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
@@ -869,12 +873,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/logs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="31" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/sql/create-logviewer.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="11" selection-start="604" selection-end="612" vertical-scroll-proportion="0.25240386" vertical-offset="0" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm30/python_stubs/1393009054/datetime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="213" column="8" selection-start="7227" selection-end="7227" vertical-scroll-proportion="0.33333334" vertical-offset="3022" max-vertical-offset="9495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1143" column="13" selection-start="47624" selection-end="47624" vertical-scroll-proportion="0.30367506" vertical-offset="16988" max-vertical-offset="23100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1460" column="0" selection-start="61615" selection-end="61615" vertical-scroll-proportion="0.33140656" vertical-offset="21728" max-vertical-offset="27720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="223" column="0" selection-start="7712" selection-end="7712" vertical-scroll-proportion="0.33333334" vertical-offset="3172" max-vertical-offset="8685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logviewer/templates/signed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="48" selection-start="646" selection-end="646" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logviewer/logviewer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="2415">
+          <folding>
+            <marker date="1396879996000" expanded="true" signature="1679:1716" placeholder="SELECT * FRO..signed..." />
+            <marker date="1396879996000" expanded="true" signature="2038:2082" placeholder="SELECT min(s..signed..." />
+            <marker date="1396879996000" expanded="true" signature="2792:2899" placeholder="SELECT * FRO..SystemEvents..." />
+            <marker date="1396879996000" expanded="true" signature="3247:3294" placeholder="INSERT INTO ..." />
+            <marker date="1396879996000" expanded="true" signature="3524:3562" placeholder="SELECT * FRO..exclude..." />
+            <marker date="1396879996000" expanded="true" signature="3807:3843" placeholder="SELECT * FRO..alert..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/todo.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="23" selection-start="259" selection-end="259" vertical-scroll-proportion="0.32374102" vertical-offset="0" max-vertical-offset="556">
+        <state line="2" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="0.03508772" vertical-offset="0" max-vertical-offset="855">
           <folding />
         </state>
       </provider>

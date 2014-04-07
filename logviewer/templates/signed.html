@@ -11,29 +11,15 @@
             <th>Signed by</th>
             <th>Date signed</th>
             <th>Message</th>
-            <th>Entries</th>
           </tr>
         </thead>
         <tbody>
-          {% if not session.signed %}
+          {% for entry in entries.itervalues() %}
             <tr>
-              <td><a href="{{ url_for('log_entries', date=2014-01-01) }}">Today</a></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>?</td>
-            </tr>
-          {% endif %}
-
-          {% for entry in entries %}
-            <tr>
-              <td><a href="{{ url_for('log_entries', date=entry['created']) }}">{{ entry['created']}}</a></td>
-              <td>{{ entry['created']}}</td>
-              <td>{{ entry['sign']}}</td>
-              <td>{{ entry['signdate']}}</td>
-              <td>{{ entry['message']}}</td>
-              <td>?</td>
+              <td><a href="{{ url_for('log_entries', date=entry['created']) }}">{{ entry['created'] }}</a></td>
+              <td>{{ entry.get('sign', 'Unsigned') }}</td>
+              <td>{{ entry.get('signdate', '')}}</td>
+              <td>{{ entry.get('message', '') }}</td>
             </tr>
           {% endfor %}
 

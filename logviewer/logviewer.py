@@ -9,11 +9,14 @@
 """
 
 import os
+from datetime import datetime, timedelta
 import time
+from collections import OrderedDict
 
 from sqlalchemy import create_engine
 from sqlalchemy.sql.expression import text
 from flask import Flask, request, g, redirect, url_for, render_template, flash
+
 
 
 # create our little application :)
@@ -53,13 +56,44 @@ def close_db(ex):
 
 @app.route('/')
 def signed():
-    cur = g.con.execute('SELECT * FROM signed ORDER BY id DESC')
-    entries = cur.fetchall()
-    args = {
-        'REMOTE_USER': os.environ.get("REMOTE_USER", 'Unknown')
-    }
+    args = {'REMOTE_USER': os.environ.get("REMOTE_USER", 'Unknown')}
+    return render_template('signed.html', entries=signed_days(), **args)
 
-    return render_template('signed.html', entries=entries, **args)
+
+def signed_days():
+    """Return a dict with all signed and unsigned days since first sign.
+
+    days['2014-01-01'] = {'created': '2014-01-01', 'sign':... }
+
+    """
+    days = unsigned_days()
+    cur = g.con.execute('SELECT * FROM signed ORDER BY id DESC')
+    for row in cur.fetchall():
+        key = row['created'].strftime('%Y-%m-%d')
+        days[key] = dict(row)
+    return days
+
+
+def unsigned_days():
+    """Return a dict with all days since first sign.
+    Value is a default dict.
+
+    days['2014-01-01'] = {'created': '2014-01-01'  }
+    """
+    cur = g.con.execute('SELECT min(signdate) as signdate FROM signed')
+    first_sign_date = cur.fetchone()['signdate']
+    if not first_sign_date:
+        first_sign_date = datetime.now()
+
+    def _key(x):
+        return (datetime.now() - timedelta(x)).strftime('%Y-%m-%d')
+
+    days = (datetime.now() - first_sign_date).days
+    unsigned = OrderedDict()
+    for x in xrange(days):
+        unsigned[_key(x)] = {'created': _key(x)}
+
+    return unsigned
 
 
 @app.route('/log-entries/<date>')
