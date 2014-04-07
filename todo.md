@@ -1,7 +1,6 @@
 TODO
 ====
 
-* log-entries
 * sign entries
 * add/del excludes
 * add/del alerts

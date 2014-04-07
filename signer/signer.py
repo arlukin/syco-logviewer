@@ -99,16 +99,16 @@ def unsigned_days():
 @app.route('/log-entries/<date>')
 def log_entries(date):
     """Takes a date with format 2013-01-23"""
-    day_time = time.strptime(date, '%Y-%m-%d')
-    from_date = time.strftime('%Y-%m-%d 00:00:00', day_time)
-    to_date = time.strftime('%Y-%m-%d 23:59:59', day_time)
-
+    # TODO: remove hardcoded date.
+    date = '2014-02-21'
+    day = datetime.strptime(date, '%Y-%m-%d')
     cur = g.con.execute(
         text(
             'SELECT * FROM SystemEvents '
             'WHERE ReceivedAt BETWEEN :from_date AND :to_date ORDER BY id DESC'
         ),
-        from_date=from_date, to_date=to_date
+        from_date=day.strftime('%Y-%m-%d 00:00:00'),
+        to_date=day.strftime('%Y-%m-%d 23:59:59')
     )
 
     entries = cur.fetchall()
