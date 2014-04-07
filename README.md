@@ -1,16 +1,3 @@
-# TODO
-
-Try to get the database stuff work in flaskr.py
-
-
-
-
-
-
-
-
-
-
 # The Syco Logviwer
 
 ## Requirements

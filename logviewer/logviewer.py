@@ -52,7 +52,7 @@ def close_db(ex):
 
 
 @app.route('/')
-def logs():
+def signed():
     cur = g.con.execute('SELECT * FROM signed ORDER BY id DESC')
     entries = cur.fetchall()
     args = {
