@@ -1,1 +1,1 @@
-*/5 * * * * root    /var/www/html/syco-logviewer/bin/mysql_clean_exclude.py
+*/5 * * * * root    /var/www/html/syco-signer/bin/mysql_clean_exclude.py

@@ -3,7 +3,6 @@ TODO
 
 * log-entries
 * sign entries
-* Rename syco-signer
 * add/del excludes
 * add/del alerts
 * Fix the cronjob function auto_alert

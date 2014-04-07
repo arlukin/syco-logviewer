@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-    Syco Logviewer
+    Syco Signer
     ~~~~~~~~~~~~~~
 
     :author: Daniel Lindh <daniel@cybercow.se>
@@ -118,7 +118,7 @@ def ask_create_systemevents(con):
 def ask_create_log_viewer(con):
     result = con.execute('SHOW TABLES LIKE "alert"')
     if result.rowcount and 'alert' in result.fetchone()[0]:
-        print "* The syco LogViewer tables already exist."
+        print "* The Syco Signer tables already exist."
         if not query_yes_no("  Do you like to recreate the tables?", "no"):
             return False
     return True
@@ -199,12 +199,12 @@ if create_systemevents:
     mysql_load('create-systemevents.sql')
 
 if create_log_viewer:
-    mysql_load('create-logviewer.sql')
+    mysql_load('create-signer.sql')
 
 if load_system_events:
     mysql_load('data-systemevents.sql')
 
 if load_log_viewer:
-    mysql_load('data-logviewer.sql')
+    mysql_load('data-signer.sql')
 
 print "Done"

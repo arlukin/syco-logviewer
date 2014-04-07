@@ -2,7 +2,10 @@
 
 ## Requirements
 
-* pip install mysql-connector-python
+* Install
+    pip install mysql-connector-python
+    pip install Flask-sqlalchemy
+
 * Apache webserver
 * Mysql database with logs
 * Syslog standard logformat in syslog

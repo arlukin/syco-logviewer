@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    Syco Logviewer
+    Syco Signer
     ~~~~~~~~~~~~~~
 
     :author: Daniel Lindh <daniel@cybercow.se>
